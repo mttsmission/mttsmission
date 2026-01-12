@@ -36,7 +36,7 @@ header {
 }
 
 .header-inner {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     width: 100%;
     padding: 10px 20px;
@@ -46,7 +46,7 @@ header {
 }
 
 .header-inner img {
-    height: 80px;
+    height: 95px;
     width: auto;
     object-fit: contain;
 }
@@ -65,7 +65,7 @@ nav a:hover {
 
 /* --- Content Container --- */
 .container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 60px 20px;
     flex: 1;
@@ -133,7 +133,7 @@ footer {
 }
 
 .footer-inner {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 30px 20px;
     text-align: center;
