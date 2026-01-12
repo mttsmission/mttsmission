@@ -1,29 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8">
-<title>MTTS Mission | Donate</title>
-<link rel="stylesheet" href="style.css">
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script></head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTTS Mission | Donate</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
 <body>
-<header><div class="header-inner">
-<img src="logo.png">
-<nav><a href="index.html">Home</a><a href="about.html">About Us</a><a href="donate.html">Donate Now</a></nav>
-</div></header>
-<main class="container">
-<h1>Support Our Mission</h1>
-<p>Your contribution helps us reach more communities</p>
-<button onclick="payNow()">Donate Now</button>
-<div class="payment-info">
-We accept UPI, Cards, Net Banking & Wallets via Razorpay
-<span>For bank transfer or international donations, contact us.</span>
-</div>
-</main>
-<footer><div class="footer-inner">© 2026 MTTS Mission. All rights reserved.</div></footer>
-<script>
-function payNow(){
- var options={key:"RAZORPAY_KEY_ID",amount:"50000",currency:"INR",name:"MTTS Mission",
- handler:function(r){alert("Payment successful: "+r.razorpay_payment_id);}}
- new Razorpay(options).open();
-}
-</script>
-</body></html>
+    <header>
+        <div class="header-inner">
+            <img src="logo.png" alt="MTTS Mission Logo">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="donate.html">Donate Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Support Our Mission</h1>
+        <p>Your contribution helps us reach more communities</p>
+        <button class="btn-primary" onclick="payNow()">Donate Now</button>
+        <div class="payment-info">
+            <p>We accept UPI, Cards, Net Banking & Wallets via Razorpay</p>
+            <span>For bank transfer or international donations, contact us.</span>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">© 2026 MTTS Mission. All rights reserved.</div>
+    </footer>
+
+    <script>
+        function payNow(){
+            var options = {
+                key: "RAZORPAY_KEY_ID", // Replace with your actual key
+                amount: "50000", 
+                currency: "INR",
+                name: "MTTS Mission",
+                handler: function(r){
+                    alert("Payment successful: " + r.razorpay_payment_id);
+                }
+            };
+            new Razorpay(options).open();
+        }
+    </script>
+</body>
+</html>
