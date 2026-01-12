@@ -47,6 +47,7 @@ header {
 
 .header-inner img {
     height: 95px;
+    width: auto;
     object-fit: contain;
 }
 
